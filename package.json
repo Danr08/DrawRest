@@ -1,0 +1,25 @@
+{
+  "name": "drawrest",
+  "version": "1.0.0",
+  "description": "Apis de que se utilizan para el sitio web DrawWeb",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danr08/DrawRest.git"
+  },
+  "author": "Daniel Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danr08/DrawRest/issues"
+  },
+  "homepage": "https://github.com/Danr08/DrawRest#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql": "^2.18.1"
+  }
+}
