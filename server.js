@@ -85,3 +85,20 @@ const port = 3000
     })
  })
 
+app.post("/logout", (req, res) => {
+    const token = req.headers.authorization.split(" ")[1]
+    try {
+      const payload = jwt.verify(token, process.env.SECRET);
+      if (Date.now() > payload.exp) {
+        return res.status(401).send({ error: "Su token expiro" })
+      }
+    } catch (error) {
+      return res.status(401).send({ error: "Se requiere un token" })
+    }
+
+    return res.status(200).json({msg: "Se cerró sesión exitosamente"})
+})
+
+
+
+
